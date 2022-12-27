@@ -8,7 +8,7 @@
 .city {
   font-size: 55px;
   position: relative;
-  top: -70px;
+  top: -10px;
   right: 570px;
 }
 
@@ -44,20 +44,20 @@
 .temperature {
   font-size: 55px;
   position: relative;
-  top: -240px;
+  top: -190px;
   left: 570px;
 }
 
 .icon {
   position: relative;
-  top: -145px;
+  top: -95px;
   left: 500px;
 }
 
 .weatherConditions {
   list-style: none;
   position: relative;
-  top: -310px;
+  top: -250px;
   left: 540px;
 }
 
@@ -70,8 +70,12 @@
 .currentWeatherConditions {
   list-style: none;
   position: relative;
-  top: -250px;
+  top: -190px;
   right: 590px;
+}
+form {
+  position: relative;
+  top: -400px;
 }
 
 .input {

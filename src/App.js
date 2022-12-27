@@ -26,14 +26,16 @@ export default function App() {
         <div className="container">
           <div className="card">
             <div className="card-body">
-              <input
-                placeholder="Search a City"
-                autofocu="on"
-                className="input"
-              />
-              <input type="button" value="Search" className="button" />
-
               <SearchEngine data={weatherData} />
+              <form onSubmit="handleSubmit">
+                <input
+                  type="search"
+                  placeholder="Search a City"
+                  autofocu="on"
+                  className="input"
+                />
+                <input type="button" value="Search" className="button" />
+              </form>
 
               <div className="row">
                 <div className="col-2">
