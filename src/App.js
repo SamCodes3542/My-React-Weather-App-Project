@@ -82,7 +82,7 @@ export default function App() {
           By{" "}
           <a
             className="linkedIn"
-            href="https://github.com/SamCodes3542/React-Weather-Search-Engine"
+            href="https://github.com/SamCodes3542/My-React-Weather-App-Project"
             target="_blank rel=noopener noreferrer"
           >
             Samantha Montgomery
