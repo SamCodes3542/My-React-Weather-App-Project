@@ -5,7 +5,8 @@ import SearchEngine from "./SearchEngine";
 
 export default function App() {
   const [weatherData, setWeatherData] = useState({ loaded: false });
-
+  const [city, setCity] = useState({ props.city });
+  }
   function showResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -20,6 +21,22 @@ export default function App() {
       iconUrl: "http://openweathermap.org/img/wn/10d@2x.png",
     });
   }
+
+  function search() {
+    const apiKey = "094b50c9907d04014c22a077f5e1062a";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(showResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventdefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+  setCity(event.target.value);
+  }
+
   if (weatherData.loaded) {
     return (
       <div className="App">
@@ -33,11 +50,12 @@ export default function App() {
                   placeholder="Search a City"
                   autofocu="on"
                   className="input"
+                  onChange="{handleCityChange}"
                 />
                 <input type="button" value="Search" className="button" />
               </form>
-
-              <div className="row">
+            
+ <div className="row">
                 <div className="col-2">
                   Mon
                   <br />
@@ -97,15 +115,12 @@ export default function App() {
           >
             Netlify
           </a>
-        </footer>
+          <weatherDate city="Paris" />
+        </footer>  
       </div>
     );
   } else {
-    let city = "Paris";
-    const apiKey = "094b50c9907d04014c22a077f5e1062a";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(showResponse);
-
+   search();
     return "Loading...";
   }
-}
+
