@@ -90,7 +90,7 @@ export default function App() {
           hosted on{" "}
           <a
             className="netlifyLink"
-            href="netlify.com"
+            href="https://63ab22773ba4ab37cc2bdb1b--playful-concha-c4eabc.netlify.app/"
             target="_blank rel=noopener noreferrer"
           >
             Netlify
