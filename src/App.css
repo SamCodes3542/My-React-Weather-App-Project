@@ -1,38 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&display=swap");
+
+* {
+  font-family: "Aref Ruqaa Ink", serif;
+  font-weight: bold;
+}
+
+.city {
+  font-size: 55px;
+  position: relative;
+  top: -70px;
+  right: 570px;
+}
+
+.gitLink:hover {
+  color: goldenrod;
+  text-decoration: none;
+}
+
+.linkedIn:hover {
+  color: rgb(43, 226, 73);
+  text-decoration: none;
+}
+
+.netlifyLink:hover {
+  color: rgb(226, 43, 83);
+  text-decoration: none;
+}
+
 .App {
+  font-family: sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-body,
+.card {
+  position: relative;
+  width: 81rem;
+  height: 30rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.temperature {
+  font-size: 55px;
+  position: relative;
+  top: -240px;
+  left: 570px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.icon {
+  position: relative;
+  top: -145px;
+  left: 500px;
 }
 
-.App-link {
-  color: #61dafb;
+.weatherConditions {
+  list-style: none;
+  position: relative;
+  top: -310px;
+  left: 540px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.unit {
+  position: relative;
+  top: -230px;
+  left: 610px;
+}
+
+.currentWeatherConditions {
+  list-style: none;
+  position: relative;
+  top: -250px;
+  right: 590px;
+}
+
+.input {
+  position: relative;
+  top: 10px;
+  width: 36rem;
+  height: 45px;
+}
+
+.button {
+  position: relative;
+  bottom: -10px;
+  background-color: rgb(238, 119, 143);
+  height: 45px;
+  width: 90px;
+}
+
+.row {
+  position: relative;
+  bottom: 200px;
 }
