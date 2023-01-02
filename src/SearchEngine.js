@@ -20,7 +20,7 @@ export default function SearchEngine(props) {
       </div>
       <ul className="weatherConditions">
         <li>
-          Feels Like: {props.data.feelsLike}
+          Feels Like: Math.round{props.data.feelsLike}
           <span className="float-left">c</span>{" "}
         </li>
         <li>Humidity: {props.data.humidity}% </li>
