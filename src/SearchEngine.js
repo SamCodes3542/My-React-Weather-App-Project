@@ -1,11 +1,19 @@
 import React from "react";
 import WeatherDate from "./WeatherDate";
+import Icon from  "./Icon";
 
 export default function SearchEngine(props) {
   return (
     <div className="SearchEngine">
       <h1 className="city">{props.data.city}</h1>
-      <img src={props.data.iconUrl} className="icon" alt="icon" />
+      <div className="float-left">
+        <Icon code={props.data.icon} alt={props.data.descriptiom} />
+      </div>
+      <img
+        src={props.data.iconUrl}
+        className="icon"
+        alt={props.data.descriptiom}
+      />
       <h2 className="temperature">
         {Math.round(props.data.temperature)}
         <span className="unit">C</span>

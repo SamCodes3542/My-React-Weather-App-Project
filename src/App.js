@@ -19,7 +19,7 @@ function showResponse(response) {
     wind: response.data.wind.speed,
     city: response.data.name,
     description: response.data.weather[0].description,
-    iconUrl: "http://openweathermap.org/img/wn/10d@2x.png",
+    icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
   });
 }
 
@@ -45,8 +45,7 @@ if (weatherData.loaded) {
       <div className="container">
         <div className="card">
           <div className="card-body">
-           
-  <WeatherDate data- {WeatherData} />
+            <WeatherDate data={WeatherData} />
             <form onSubmit="handleSubmit">
               <input
                 type="search"
@@ -57,7 +56,7 @@ if (weatherData.loaded) {
               />
               <input type="button" value="Search" className="button" />
             </form>
- 
+
             <div className="row">
               <div className="col-2">
                 Mon
